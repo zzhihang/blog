@@ -1,5 +1,5 @@
 
-##### 只有个function才有prototype属性 默认prototye对象身上只有一个constructor属性指向function
+##### 只有function才有prototype属性 默认prototye对象身上只有一个constructor属性指向function
 ##### 任何对象都有__proto__(原型)属性,都会指向其构造函数的prototype
 
 - 构造函数的__proto__
@@ -19,7 +19,7 @@ a.__proto__ === Function.prototype 因为a也是Function的实例
 - 普通对象的__proto__
 
 ```
-所有的普通对象的__proto__都等于Object.prototype,因为所有的普通对象都可以看做是又构造函数构造出来的对象
+所有的普通对象的__proto__都等于Object.prototype,因为所有的普通对象都可以看做是由构造函数构造出来的对象
     
 ```
 - 顶层Object.__proto__.prototype === null
