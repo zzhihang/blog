@@ -19,6 +19,8 @@ a.__proto__ === Function.prototype 因为a也是Function的实例
 - 普通对象的__proto__
 
 ```
+var a = new Object();
+a._proto = Object.prototype
 所有的普通对象的__proto__都等于Object.prototype,因为所有的普通对象都可以看做是由构造函数构造出来的对象
     
 ```
