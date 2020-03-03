@@ -72,13 +72,14 @@
 	}
 
 假设有这样一个问题，在不破坏Array本身构造函数的情况下，如何创建一个同样拥有Array方法并可以扩展？
-	function MyArray(){
-		var array = [];
-		array.push.apply(array, arguments);
-		array.splitByLine = function(){
-			return this.join('|');
-		}
-		return array;		
-	}
-	var myArray = new MyArray('zhu', 'zhi')
-	console.log(myArray.splitByLine());
+
+    function MyArray(){
+        var array = [];
+        array.push.apply(array, arguments);
+        array.splitByLine = function(){
+            return this.join('|');
+        }
+        return array;		
+    }
+    var myArray = new MyArray('zhu', 'zhi')
+    console.log(myArray.splitByLine());
