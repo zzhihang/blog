@@ -31,7 +31,7 @@
 优点：能够识别对象类型，pig来自于其构造函数Pig；
 缺点：实例会复制每个sayHungry方法，函数也是对象，相当于同时又实例化了多个对象。
 
-### 原型模式 [原型链及继承原理](https://github.com/hangpage/blog/blob/master/constructor%20__proto__%20prototype%E7%9A%84%E7%90%86%E8%A7%A3.md)
+### 原型模式 [原型链及继承原理](https://github.com/zzhihang/blog/issues/1)
 
 	function Pig(){
 	
