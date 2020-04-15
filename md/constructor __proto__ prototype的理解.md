@@ -39,6 +39,16 @@ a._proto = Object.prototype
 
  经过上面步骤，生成的a就有了构造函数的属性和方法
  
+> 代码如何实现呢？(可以和上面new的过程自行连线)
+    
+    function myNew(){
+        var obj = new Object();
+        var Constructor = [].shift.call(arguments)
+        obj._proto_ = Constructor.prototype;
+        var ret = Constructor.apply(obj, arguments);
+        return typeof ret === 'object' ? ret : obj; //处理构造函数是否有返回值
+    }
+ 
  
  #### constructor
  
