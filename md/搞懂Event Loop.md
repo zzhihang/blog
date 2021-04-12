@@ -33,7 +33,7 @@
 这里归纳3个重点：
 
 1. 宏队列macrotask一次只从队列中取一个任务执行，执行完后就去执行微任务队列中的任务；
-2. 微任务队列中所有的任务都会被依次取出来执行，知道microtask queue为空；
+2. 微任务队列中所有的任务都会被依次取出来执行，直到microtask queue为空；
 3. 图中没有画UI rendering的节点，因为这个是由浏览器自行判断决定的，但是只要执行UI rendering，它的节点是在执行完所有的microtask之后，下一个macrotask之前，紧跟着执行UI render。
 
 
