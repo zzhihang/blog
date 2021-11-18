@@ -33,3 +33,15 @@ Function.prototype.myCall = function (context) {
 
 var result = bar.myCall(foo, 'zhuzhihang', '18')
 console.log(result)
+
+
+Function.prototype.myBind = function (context){
+    const self = this;
+    const args = Array.prototype.slice.call(arguments, 1);
+    const structure = function (){
+        const _args = Array.prototype.slice.call(arguments);
+        return self.apply(this instanceof structure ? this : context, args.concat(_args))
+    }
+    structure.prototype = this.prototype;
+    return structure;
+}
